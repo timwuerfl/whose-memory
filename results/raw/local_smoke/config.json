@@ -1,0 +1,10 @@
+{
+ "limit_episodes": 2,
+ "acts_dir": "/Users/wuerfl/EpistemicsXAI Hackathon/cache/local_acts_smoke",
+ "model": "Qwen/Qwen3.5-4B",
+ "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+ "dtype": "fp16",
+ "gen_batch": 16,
+ "max_new_tokens": 200,
+ "max_attempts": 4
+}

@@ -1,0 +1,28 @@
+### deepseek-v4-flash (pilot, 18 items)
+p1 jobs: 252
+== deepseek-v4-flash p1: 252 trials, parsed 252 (100.0%)
+condition                n claim%  evid% distr% escala%  conf conf|claim
+neutral:memory          18    0.0   44.4    0.0    55.6  94.2        -  
+neutral:tool            18   11.1   16.7    0.0    72.2  91.7       77.5
+neutral:web             18    0.0   27.8    0.0    72.2  92.2        -  
+neutral:user            18   16.7   11.1    0.0    72.2  93.1       91.7
+neutral:agent           18    0.0   22.2    0.0    77.8  93.1        -  
+neutral:unattributed    18    5.6   16.7    0.0    77.8  91.7       90.0
+first_person:memory     18   16.7    5.6    0.0    77.8  93.3       90.0
+first_person:tool       18   11.1   11.1    0.0    77.8  93.1       85.0
+first_person:user       18   38.9    5.6    0.0    55.6  92.5       91.4
+first_person:agent      18   11.1   16.7    0.0    72.2  92.5       90.0
+no_claim                18    0.0  100.0    0.0     0.0  97.5        -  
+no_evidence:memory      18  100.0    0.0    0.0     0.0  96.4       96.4
+no_evidence:tool        18  100.0    0.0    0.0     0.0  97.8       97.8
+turn:memory             18    0.0   44.4    0.0    55.6  94.3        -  
+conflict conditions pooled: n=198 adoption= 10.1% escalate= 69.7%
+jobs=252 errors=0 parse_failures=0 requests=252 cost=$0.0107
+conf jobs: 72
+== deepseek-v4-flash conf: 72 trials, parsed 72
+channel  level      n   act%  conf
+memory   hedged    18    0.0  28.1
+memory   certain   18  100.0  95.8
+tool     hedged    18    0.0  28.3
+tool     certain   18   94.4  96.4
+jobs=72 errors=0 parse_failures=0 requests=72 cost=$0.0030

@@ -1,0 +1,13 @@
+victim,condition,n,unparsed
+deepseek-v4-flash,G1+G2s,150,0
+deepseek-v4-flash,G2s,180,0
+deepseek-v4-flash,G2s_insider,150,0
+deepseek-v4-flash,G2u,180,0
+deepseek-v4-flash,no_memory,150,0
+deepseek-v4-flash,none,475,0
+gemma-4-31b-it,G1+G2s,145,5
+gemma-4-31b-it,G2s,170,10
+gemma-4-31b-it,G2s_insider,140,5
+gemma-4-31b-it,G2u,170,0
+gemma-4-31b-it,no_memory,145,0
+gemma-4-31b-it,none,450,0

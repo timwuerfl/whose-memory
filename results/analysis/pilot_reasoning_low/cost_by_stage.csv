@@ -1,0 +1,2 @@
+run,stage,n_calls,input_tokens,output_tokens,reasoning_tokens,cost
+all (whole ledger),total,21900.0,12917783.0,9279816.0,4864913.0,8.634727110000002

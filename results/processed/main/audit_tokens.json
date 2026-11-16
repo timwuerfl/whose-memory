@@ -1,0 +1,164 @@
+{
+ "deepseek-v4-flash": {
+  "afc": {
+   "calls": 240,
+   "mean_input_tokens": 1675.1958333333334,
+   "mean_output_tokens": 34.875
+  },
+  "c": {
+   "calls": 1250,
+   "mean_input_tokens": 2350.9176,
+   "mean_output_tokens": 48.0416
+  },
+  "negs": {
+   "calls": 239,
+   "mean_input_tokens": 1041.1799163179917,
+   "mean_output_tokens": 48.0
+  },
+  "r": {
+   "calls": 360,
+   "mean_input_tokens": 1792.0111111111112,
+   "mean_output_tokens": 384.27222222222224
+  },
+  "v": {
+   "calls": 1250,
+   "mean_input_tokens": 1049.0888,
+   "mean_output_tokens": 48.0312
+  }
+ },
+ "gemma-4-31b-it": {
+  "afc": {
+   "calls": 224,
+   "mean_input_tokens": 1299.169642857143,
+   "mean_output_tokens": 39.61607142857143
+  },
+  "c": {
+   "calls": 1158,
+   "mean_input_tokens": 2260.623488773748,
+   "mean_output_tokens": 85.73747841105354
+  },
+  "negs": {
+   "calls": 224,
+   "mean_input_tokens": 872.21875,
+   "mean_output_tokens": 102.89285714285714
+  },
+  "r": {
+   "calls": 360,
+   "mean_input_tokens": 1256.1055555555556,
+   "mean_output_tokens": 244.3527777777778
+  },
+  "v": {
+   "calls": 1147,
+   "mean_input_tokens": 855.7070619006103,
+   "mean_output_tokens": 87.73147340889277
+  }
+ },
+ "glm-5.2": {
+  "afc": {
+   "calls": 240,
+   "mean_input_tokens": 1658.7958333333333,
+   "mean_output_tokens": 36.44166666666667
+  },
+  "c": {
+   "calls": 1242,
+   "mean_input_tokens": 2332.8985507246375,
+   "mean_output_tokens": 51.68438003220612
+  },
+  "negs": {
+   "calls": 239,
+   "mean_input_tokens": 1033.020920502092,
+   "mean_output_tokens": 56.59832635983263
+  },
+  "r": {
+   "calls": 360,
+   "mean_input_tokens": 1671.7027777777778,
+   "mean_output_tokens": 247.46944444444443
+  },
+  "v": {
+   "calls": 1213,
+   "mean_input_tokens": 1041.0915086562243,
+   "mean_output_tokens": 59.48392415498763
+  }
+ },
+ "glm-5.3-flash": {
+  "afc": {
+   "calls": 226,
+   "mean_input_tokens": 1619.6858407079646,
+   "mean_output_tokens": 207.19911504424778
+  },
+  "c": {
+   "calls": 1250,
+   "mean_input_tokens": 2317.684,
+   "mean_output_tokens": 133.4632
+  },
+  "negs": {
+   "calls": 239,
+   "mean_input_tokens": 1020.4435146443515,
+   "mean_output_tokens": 130.90376569037656
+  },
+  "r": {
+   "calls": 360,
+   "mean_input_tokens": 1635.0722222222223,
+   "mean_output_tokens": 252.64444444444445
+  },
+  "v": {
+   "calls": 1246,
+   "mean_input_tokens": 1027.5449438202247,
+   "mean_output_tokens": 138.56741573033707
+  }
+ },
+ "pooled": {
+  "afc": {
+   "calls": 1170,
+   "mean_input_tokens": 1591.9350427350428,
+   "mean_output_tokens": 76.9982905982906
+  },
+  "c": {
+   "calls": 6129,
+   "mean_input_tokens": 2347.5679556208192,
+   "mean_output_tokens": 86.79637787567303
+  },
+  "negs": {
+   "calls": 1180,
+   "mean_input_tokens": 1011.1093220338983,
+   "mean_output_tokens": 83.37118644067796
+  },
+  "r": {
+   "calls": 1800,
+   "mean_input_tokens": 1592.5327777777777,
+   "mean_output_tokens": 275.49055555555555
+  },
+  "v": {
+   "calls": 6082,
+   "mean_input_tokens": 1013.1566918776718,
+   "mean_output_tokens": 82.65932259125287
+  }
+ },
+ "qwen3.8-27b": {
+  "afc": {
+   "calls": 240,
+   "mean_input_tokens": 1688.9291666666666,
+   "mean_output_tokens": 71.9625
+  },
+  "c": {
+   "calls": 1229,
+   "mean_input_tokens": 2471.301871440195,
+   "mean_output_tokens": 115.23026851098454
+  },
+  "negs": {
+   "calls": 239,
+   "mean_input_tokens": 1079.9665271966528,
+   "mean_output_tokens": 79.68619246861925
+  },
+  "r": {
+   "calls": 360,
+   "mean_input_tokens": 1607.7722222222221,
+   "mean_output_tokens": 248.7138888888889
+  },
+  "v": {
+   "calls": 1226,
+   "mean_input_tokens": 1081.563621533442,
+   "mean_output_tokens": 79.3295269168026
+  }
+ }
+}

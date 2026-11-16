@@ -1,0 +1,3 @@
+group,field,quantity,est,lo,hi,n,n_clusters,reason
+pooled,confidence,laundering,,,,,,no conf.jsonl for this run
+pooled,act,laundering,,,,,,no conf.jsonl for this run

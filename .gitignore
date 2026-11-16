@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+*.egg-info/
+.ipynb_checkpoints/
+# large local caches (activations, HF models)
+cache/
+results/activations/
+*.npz
+# latex build
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+.claude/settings.local.json
+results/logs/

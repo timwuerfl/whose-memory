@@ -1,0 +1,7 @@
+condition,group,relative_est,relative_lo,relative_hi,relative_n,relative_n_clusters,relative_reason,absolute_est,absolute_lo,absolute_hi,absolute_n,absolute_n_clusters,absolute_reason,tier
+G2u,pooled,,,,,,condition G2u absent,,,,,,condition G2u absent,
+G2s,pooled,,,,,,condition G2s absent,,,,,,condition G2s absent,
+G2s_insider,pooled,,,,,,condition G2s_insider absent,,,,,,condition G2s_insider absent,
+G1+G2s,pooled,,,,,,condition G1+G2s absent,,,,,,condition G1+G2s absent,
+G1,pooled,,,,,,condition G1 at T3 absent,,,,,,,T3
+G1,pooled (primary 4),,,,,,condition G1 absent (gate not run yet),,,,,,,T0+T2

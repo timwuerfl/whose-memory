@@ -1,0 +1,5 @@
+estimand,est,p,p_holm,n,n_clusters,supported,reason,lo,hi
+P1_self_trust_premium,,,,,,,no rows,,
+P2_verbal_recognition_T2,0.5558549506759225,0.021989005497251374,0.021989005497251374,176,23,True,,0.4743037632141251,0.6307302929223219
+P3_integrity_gap_T3,,,,,,,no victim with an estimate,,
+P4_gate_effectiveness,,,,,,,condition G1 absent (gate not run yet),,

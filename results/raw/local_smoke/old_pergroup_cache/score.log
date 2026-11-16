@@ -1,0 +1,30 @@
+[score] 1374 (pass, item) jobs to do; 0 rows on disk
+W1113 22:49:14.473000 90623 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<12:49,  1.81s/it]Loading weights:  53%|█████▎    | 224/426 [00:01<00:01, 161.29it/s]Loading weights:  78%|███████▊  | 334/426 [00:03<00:00, 108.09it/s]Loading weights:  93%|█████████▎| 397/426 [00:04<00:00, 100.55it/s]Loading weights: 100%|██████████| 426/426 [00:04<00:00, 92.22it/s] 
+[lm] Qwen/Qwen3.5-4B on mps (fp16)
+[score] block genuine+T2+T0+T1: 132 items
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[score] 72/1374 jobs  1.35 jobs/s  eta 0.27 h  | s_trace:1.69/s  s_blind:2.23/s  c:1.98/s  v:0.71/s
+[score] 140/1374 jobs  1.39 jobs/s  eta 0.25 h  | s_trace:1.74/s  s_blind:2.25/s  c:2.04/s  v:0.74/s
+[score] 212/1374 jobs  1.40 jobs/s  eta 0.23 h  | s_trace:1.74/s  s_blind:2.25/s  c:1.99/s  v:0.75/s
+[score] 280/1374 jobs  1.42 jobs/s  eta 0.21 h  | s_trace:1.77/s  s_blind:2.27/s  c:2.00/s  v:0.76/s
+[score] 352/1374 jobs  1.37 jobs/s  eta 0.21 h  | s_trace:1.68/s  s_blind:2.18/s  c:1.92/s  v:0.74/s
+[score] 424/1374 jobs  1.34 jobs/s  eta 0.20 h  | s_trace:1.67/s  s_blind:2.16/s  c:1.89/s  v:0.72/s
+[score] 492/1374 jobs  1.33 jobs/s  eta 0.18 h  | s_trace:1.67/s  s_blind:2.14/s  c:1.87/s  v:0.71/s
+[score] block cand: 96 items
+[score] 568/1374 jobs  1.31 jobs/s  eta 0.17 h  | s_trace:1.69/s  s_blind:2.16/s  c:1.90/s  v:0.71/s  v_att:0.56/s
+[score] 648/1374 jobs  1.28 jobs/s  eta 0.16 h  | s_trace:1.67/s  s_blind:2.11/s  c:1.87/s  v:0.71/s  v_att:0.67/s
+[score] 728/1374 jobs  1.26 jobs/s  eta 0.14 h  | s_trace:1.64/s  s_blind:2.11/s  c:1.90/s  v:0.72/s  v_att:0.68/s
+[score] 808/1374 jobs  1.23 jobs/s  eta 0.13 h  | s_trace:1.62/s  s_blind:2.13/s  c:1.83/s  v:0.71/s  v_att:0.68/s
+[score] 888/1374 jobs  1.20 jobs/s  eta 0.11 h  | s_trace:1.53/s  s_blind:2.04/s  c:1.83/s  v:0.71/s  v_att:0.65/s
+[score] 968/1374 jobs  1.08 jobs/s  eta 0.10 h  | s_trace:1.32/s  s_blind:1.47/s  c:1.59/s  v:0.71/s  v_att:0.65/s
+[score] block other: 84 items
+[score] 1032/1374 jobs  1.01 jobs/s  eta 0.09 h  | s_trace:1.10/s  s_blind:1.47/s  c:1.61/s  v:0.69/s  v_att:0.60/s
+[score] 1096/1374 jobs  0.96 jobs/s  eta 0.08 h  | s_trace:1.00/s  s_blind:1.48/s  c:1.62/s  v:0.62/s  v_att:0.60/s
+[score] 1160/1374 jobs  0.97 jobs/s  eta 0.06 h  | s_trace:1.00/s  s_blind:1.49/s  c:1.62/s  v:0.62/s  v_att:0.60/s
+[score] 1224/1374 jobs  0.97 jobs/s  eta 0.04 h  | s_trace:1.01/s  s_blind:1.52/s  c:1.62/s  v:0.61/s  v_att:0.60/s
+[score] 1288/1374 jobs  0.98 jobs/s  eta 0.02 h  | s_trace:1.02/s  s_blind:1.54/s  c:1.63/s  v:0.61/s  v_att:0.60/s
+[score] block xep: 30 items
+[score] 1352/1374 jobs  0.98 jobs/s  eta 0.01 h  | s_trace:1.04/s  s_blind:1.57/s  c:1.63/s  v:0.61/s  v_att:0.60/s
+[score] done 1374 jobs in 1422s; per pass: {"s_trace": {"items": 312, "seconds": 300.3, "items_per_s": 1.039, "mean_prompt_tok": 510.5, "mean_computed_tok": 241.4}, "s_blind": {"items": 312, "seconds": 199.3, "items_per_s": 1.565, "mean_prompt_tok": 334.6, "mean_computed_tok": 188.3}, "c": {"items": 312, "seconds": 191.0, "items_per_s": 1.634, "mean_prompt_tok": 474.5, "mean_computed_tok": 259.5}, "v": {"items": 342, "seconds": 568.4, "items_per_s": 0.602, "mean_prompt_tok": 1092.5, "mean_computed_tok": 761.6}, "v_att": {"items": 96, "seconds": 161.2, "items_per_s": 0.596, "mean_prompt_tok": 1074.1, "mean_computed_tok": 680.2}}

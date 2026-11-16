@@ -1,0 +1,3 @@
+{"victim": "deepseek-v4-flash", "part": "afc", "model": "deepseek-v4-flash", "latency_s": 229.924, "usage": {"input_tokens": 1367, "output_tokens": 35, "reasoning_tokens": 0}, "error": null, "attempts": 1}
+{"victim": "deepseek-v4-flash", "part": "afc", "model": "deepseek-v4-flash", "latency_s": 233.144, "usage": {"input_tokens": 1368, "output_tokens": 35, "reasoning_tokens": 0}, "error": null, "attempts": 1}
+{"victim": "deepseek-v4-flash", "part": "afc", "model": "deepseek-v4-flash", "latency_s": 416.997, "usage": {"input_tokens": 1294, "output_tokens": 29, "reasoning_tokens": 0}, "error": null, "attempts": 1}

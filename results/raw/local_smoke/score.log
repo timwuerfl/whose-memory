@@ -1,0 +1,35 @@
+[score] pass s_trace: nothing to do
+W1114 01:36:59.146000 21341 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:02<14:51,  2.10s/it]Loading weights:  50%|████▉     | 212/426 [00:02<00:01, 131.44it/s]Loading weights:  70%|███████   | 300/426 [00:04<00:01, 75.99it/s] Loading weights:  82%|████████▏ | 350/426 [00:05<00:01, 64.79it/s]Loading weights:  90%|████████▉ | 382/426 [00:06<00:00, 60.38it/s]Loading weights:  95%|█████████▍| 404/426 [00:06<00:00, 58.72it/s]Loading weights:  99%|█████████▉| 421/426 [00:07<00:00, 52.03it/s]Loading weights: 100%|██████████| 426/426 [00:07<00:00, 60.29it/s]
+[lm] Qwen/Qwen3.5-4B on mps (fp16)
+[score] pass s_blind: 120 items  (mps 8.8 GB)
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[score] s_blind/cand: 64 jobs  s_blind 0.58/s  mps 8.8 GB (peak 8.8)  2.3 min
+[score] s_blind/cand: 96 jobs  s_blind 0.62/s  mps 8.9 GB (peak 8.9)  3.0 min
+[score] s_blind/cand done: 96 items  mps 8.9 GB
+[score] s_blind/other: 112 jobs  s_blind 0.67/s  mps 8.9 GB (peak 8.9)  3.2 min
+[score] s_blind/other done: 24 items  mps 8.9 GB
+[score] pass c: 144 items  (mps 8.9 GB)
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[score] c/genuine done: 12 items  mps 8.8 GB
+[score] c/T2 done: 12 items  mps 8.8 GB
+[score] c/T0 done: 12 items  mps 8.8 GB
+[score] c/T1 done: 12 items  mps 8.8 GB
+[score] c/cand: 232 jobs  c 0.97/s  mps 8.9 GB (peak 8.9)  5.3 min
+[score] c/cand: 264 jobs  c 1.04/s  mps 8.9 GB (peak 8.9)  5.7 min
+[score] c/cand done: 96 items  mps 8.9 GB
+[score] pass v_att: 96 items  (mps 8.9 GB)
+[score] v_att/cand: 328 jobs  v_att 1.85/s  mps 8.9 GB (peak 8.9)  6.3 min
+[score] v_att/cand: 360 jobs  v_att 1.79/s  mps 8.9 GB (peak 8.9)  6.6 min
+[score] v_att/cand done: 96 items  mps 8.9 GB
+[score] select before pass v: 37 distinct selected candidates (0 empty tier slots)
+[score] pass v: 85 items  (mps 8.9 GB)
+[score] v/genuine done: 12 items  mps 8.8 GB
+[score] v/T2 done: 12 items  mps 8.8 GB
+[score] v/T0 done: 12 items  mps 8.8 GB
+[score] v/T1 done: 12 items  mps 8.8 GB
+[score] v/cand: 436 jobs  v 0.30/s  mps 8.8 GB (peak 8.9)  10.8 min
+[score] v/cand done: 37 items  mps 8.8 GB
+[score] finished 445 jobs in 681s; peak mps 8.9 GB; per pass: {"s_blind": {"items": 120, "seconds": 174.3, "items_per_s": 0.689, "mean_prompt_tok": 340.7, "mean_computed_tok": 171.6}, "c": {"items": 144, "seconds": 138.0, "items_per_s": 1.044, "mean_prompt_tok": 492.5, "mean_computed_tok": 312.4}, "v_att": {"items": 96, "seconds": 53.5, "items_per_s": 1.795, "mean_prompt_tok": 258.7, "mean_computed_tok": 182.2}, "v": {"items": 85, "seconds": 282.1, "items_per_s": 0.301, "mean_prompt_tok": 1097.2, "mean_computed_tok": 977.6}}

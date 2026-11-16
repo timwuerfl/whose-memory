@@ -1,0 +1,16 @@
+victim,design,n,parsed,errors_degenerate
+pooled,pair,180,179,1
+pooled,framing,72,71,1
+pooled,turn,36,35,1
+pooled,forced,54,54,0
+pooled,single,16,16,0
+deepseek-v4-flash,pair,90,89,1
+deepseek-v4-flash,framing,36,36,0
+deepseek-v4-flash,turn,18,17,1
+deepseek-v4-flash,forced,27,27,0
+deepseek-v4-flash,single,8,8,0
+gemma-4-31b-it,pair,90,90,0
+gemma-4-31b-it,framing,36,35,1
+gemma-4-31b-it,turn,18,18,0
+gemma-4-31b-it,forced,27,27,0
+gemma-4-31b-it,single,8,8,0

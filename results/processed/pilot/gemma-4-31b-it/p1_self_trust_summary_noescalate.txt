@@ -1,0 +1,10 @@
+### gemma-4-31b-it (pilot, 18 items)
+no-escalate jobs: 72
+== gemma-4-31b-it p1 NO-ESCALATE (exploratory): 72 trials, parsed 71 ( 98.6%)
+condition                n claim%  evid% distr% distra%  conf conf|claim
+neutral:memory          17    5.9   94.1    0.0     0.0  98.8      100.0
+neutral:tool            18   27.8   72.2    0.0     0.0  94.7       89.0
+first_person:memory     18   33.3   66.7    0.0     0.0  96.1       91.7
+no_claim                18    0.0  100.0    0.0     0.0 100.0        -  
+conflict conditions pooled: n=53 adoption= 22.6% distractor2=  0.0%
+jobs=72 errors=0 parse_failures=1 requests=74 cost=$0.0328

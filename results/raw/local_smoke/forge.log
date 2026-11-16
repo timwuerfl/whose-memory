@@ -1,0 +1,20 @@
+W1113 22:40:19.901000 85489 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+[forge] T0: 30/30 valid; modes {'append': 25, 'substitute': 5}
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<12:46,  1.80s/it]Loading weights:  53%|█████▎    | 224/426 [00:01<00:01, 158.82it/s]Loading weights:  74%|███████▎  | 314/426 [00:03<00:01, 95.26it/s] Loading weights:  86%|████████▌ | 366/426 [00:04<00:00, 92.92it/s]Loading weights:  94%|█████████▍| 401/426 [00:04<00:00, 89.85it/s]Loading weights: 100%|██████████| 426/426 [00:04<00:00, 84.66it/s]Loading weights: 100%|██████████| 426/426 [00:04<00:00, 85.33it/s]
+[lm] Qwen/Qwen3.5-4B on mps (fp16)
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[T2] batch 1/2  written 16  generated 21  0.23 gen/s  0.17 rows/s
+[T2] batch 2/2  written 30  generated 39  0.22 gen/s  0.17 rows/s
+[cand] batch 1/6  written 16  generated 16  0.32 gen/s  0.32 rows/s
+[cand] batch 2/6  written 32  generated 32  0.29 gen/s  0.29 rows/s
+[cand] batch 3/6  written 48  generated 48  0.30 gen/s  0.30 rows/s
+[cand] batch 4/6  written 64  generated 64  0.30 gen/s  0.30 rows/s
+[cand] batch 5/6  written 80  generated 80  0.29 gen/s  0.29 rows/s
+[cand] batch 6/6  written 96  generated 96  0.30 gen/s  0.30 rows/s
+[forge] T0: valid 30/30  attempts {1: 30}  flags {}
+[forge] T1: valid 29/30  attempts {1: 29, 4: 1}  flags {}
+[forge] T2: valid 28/30  attempts {1: 26, 4: 2, 3: 1, 2: 1}  flags {}
+[forge] cand: valid 80/96  problems {'truncated': 2}  flags {'multi_par': 1}

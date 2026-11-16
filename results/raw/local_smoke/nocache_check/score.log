@@ -1,0 +1,15 @@
+[score] 528 (pass, item) jobs to do; 0 rows on disk
+W1113 23:13:41.767000 25487 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<12:53,  1.82s/it]Loading weights:  53%|█████▎    | 224/426 [00:01<00:01, 161.55it/s]Loading weights:  81%|████████  | 344/426 [00:03<00:00, 102.61it/s]Loading weights:  97%|█████████▋| 413/426 [00:04<00:00, 93.07it/s] Loading weights: 100%|██████████| 426/426 [00:04<00:00, 88.78it/s]
+[lm] Qwen/Qwen3.5-4B on mps (fp16)
+[score] block genuine+T2+T0+T1: 132 items
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[score] 72/528 jobs  0.88 jobs/s  eta 0.14 h  | s_trace:0.95/s  s_blind:1.41/s  c:1.13/s  v:0.52/s
+[score] 140/528 jobs  0.86 jobs/s  eta 0.12 h  | s_trace:0.96/s  s_blind:1.39/s  c:1.13/s  v:0.51/s
+[score] 212/528 jobs  0.85 jobs/s  eta 0.10 h  | s_trace:0.96/s  s_blind:1.38/s  c:1.10/s  v:0.50/s
+[score] 280/528 jobs  0.85 jobs/s  eta 0.08 h  | s_trace:0.96/s  s_blind:1.38/s  c:1.10/s  v:0.50/s
+[score] 352/528 jobs  0.84 jobs/s  eta 0.06 h  | s_trace:0.94/s  s_blind:1.37/s  c:1.09/s  v:0.49/s
+[score] 424/528 jobs  0.84 jobs/s  eta 0.03 h  | s_trace:0.95/s  s_blind:1.37/s  c:1.10/s  v:0.49/s
+[score] 492/528 jobs  0.85 jobs/s  eta 0.01 h  | s_trace:0.96/s  s_blind:1.38/s  c:1.10/s  v:0.49/s
+[score] done 528 jobs in 619s; per pass: {"s_trace": {"items": 132, "seconds": 137.0, "items_per_s": 0.963, "mean_prompt_tok": 517.9, "mean_computed_tok": 517.9}, "s_blind": {"items": 132, "seconds": 95.4, "items_per_s": 1.384, "mean_prompt_tok": 342.4, "mean_computed_tok": 342.4}, "c": {"items": 132, "seconds": 119.3, "items_per_s": 1.107, "mean_prompt_tok": 481.9, "mean_computed_tok": 481.9}, "v": {"items": 132, "seconds": 266.6, "items_per_s": 0.495, "mean_prompt_tok": 1101.1, "mean_computed_tok": 1101.1}}

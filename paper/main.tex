@@ -1,0 +1,125 @@
+% Paper in the Apart Research sprint template style (Old Standard TT, Letter, 1in margins).
+% Build from the repository root:
+%   TECTONIC_CACHE_DIR=cache/tectonic cache/bin/tectonic -X compile paper/main.tex --outdir paper   (or: make paper)
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{OldStandardTT}[Path=fonts/,Extension=.ttf,UprightFont=*-regular,BoldFont=*-bold,
+  ItalicFont=*-italic,BoldItalicFont=*-italic,BoldItalicFeatures={FakeBold=2.2},Ligatures=TeX]
+\setmonofont{lmmono10-regular.otf}[Scale=0.95]
+% Math fonts: scale the 10pt Computer Modern fonts to every size
+\DeclareFontFamily{OML}{cmm}{\skewchar\font127 }
+\DeclareFontShape{OML}{cmm}{m}{it}{<-> cmmi10}{}
+\DeclareFontFamily{OMS}{cmsy}{\skewchar\font48 }
+\DeclareFontShape{OMS}{cmsy}{m}{n}{<-> cmsy10}{}
+\DeclareFontShape{OT1}{cmr}{m}{n}{<-> cmr10}{}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[font=small,labelfont=bf,skip=6pt]{caption}
+\usepackage[round,sort&compress]{natbib}
+\definecolor{tpllink}{HTML}{1155CC}
+\usepackage[colorlinks,allcolors=tpllink]{hyperref}
+\usepackage{titlesec}
+
+\linespread{1.0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1.5pt minus 1pt}
+\emergencystretch=1.5em
+\clubpenalty=3000 \widowpenalty=3000
+
+% Headings as in the template: bold 14pt for sections, bold 13pt for subsections
+\titleformat{\section}{\fontsize{14}{19}\selectfont\bfseries}{\thesection.}{0.4em}{}
+\titleformat{name=\section,numberless}{\fontsize{14}{19}\selectfont\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{14pt plus 2pt}{2pt}
+\titleformat{\subsection}{\fontsize{13}{17}\selectfont\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{name=\subsection,numberless}{\fontsize{13}{17}\selectfont\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{10pt plus 2pt}{0pt}
+\titleformat{\paragraph}[runin]{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{2pt}{0.5em}
+
+\setlist{leftmargin=0.5in,labelsep=0.5em,itemsep=3pt,topsep=2pt,parsep=0pt}
+\setlength{\textfloatsep}{12pt plus 2pt}
+\setlength{\floatsep}{10pt plus 2pt}
+\setlength{\intextsep}{10pt plus 2pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.8}
+\setlength{\bibsep}{3pt}
+\graphicspath{{figures/}}
+
+% Math symbols that would need the cmsy font are taken from the text font instead
+\newcommand{\txtsym}[1]{\mathchoice{\mbox{#1}}{\mbox{#1}}{\mbox{\scriptsize #1}}{\mbox{\tiny #1}}}
+\begingroup\catcode`\-=\active \gdef-{\mathbin{\txtsym{\textminus}}}\endgroup
+\AtBeginDocument{\mathcode`\-="8000
+  \renewcommand{\times}{\mathbin{\txtsym{\texttimes}}}%
+  \renewcommand{\geq}{\mathrel{\txtsym{^^^^2265}}}%
+  \renewcommand{\mid}{\mathrel{\txtsym{|}}}}
+\providecommand{\text}[1]{\mbox{#1}}
+% A table that is scaled down only if it is wider than the text block
+\newcommand{\fittable}[1]{\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{\input{#1}}}
+
+\IfFileExists{numbers.tex}{\input{numbers}}{}
+\IfFileExists{numbers_local.tex}{\input{numbers_local}}{}
+
+\begin{document}
+
+\begin{center}
+{\fontsize{20}{25}\selectfont\bfseries Whose Memory Is This?\par}
+\vspace{6pt}
+{\fontsize{13}{17}\selectfont\bfseries AI Agents Follow an Unchallenged Note and Cannot Spot a Swapped Fact
+Without the Session Log\par}
+\vspace{16pt}
+Tim W\"urfl\par
+\vspace{2pt}
+Technical University of Munich and Safe AI Germany\par
+\vspace{10pt}
+With {\bfseries\itshape Apart Research}\footnote{Research conducted at the
+\href{https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15}{AI
+$\times$ Epistemics Research Sprint}, November 2026.}\par
+\vspace{14pt}
+{\fontsize{14}{18}\selectfont\bfseries Abstract\par}
+\end{center}
+\vspace{-4pt}
+\begin{list}{}{\leftmargin=0.375in\rightmargin=0.375in\topsep=0pt\parsep=0pt}
+\item\itshape
+AI agents that work across sessions keep notes, and anyone with write access to the memory store can replace
+one. We ask how much weight an agent gives a note labelled as its own, and whether it can tell such a note from
+a forgery. In MemLab, a synthetic environment, a graded forger replaces one of seven notes; we test five hosted
+open-weight models and one local model, without extended reasoning, under a pre-registered design. We
+hypothesised that agents over-trust their notes. They do not when a conflict is visible: against a
+contradicting tool output they flag the conflict in \PonePairMemoryVsToolEsc\% of trials, follow the tool in
+\PonePairMemoryVsToolFollowB\% and the note in \PonePairMemoryVsToolFollowA\%. Unchallenged, however, the note
+is taken as given: a forged note with a swapped fact steers the decision in \PfourEditNoneTTwoEOneAsr\% of
+cases. Inspection does not protect. Asked which entries they wrote, models reach an AUROC of \PrimVerbalTTwo{}
+against a forger writing in their style and \DetEditVTTwoEOne{} for swapped facts; imitating their style adds
+nothing beyond fluency. Given the session log, the same audit reaches \DetMeanCTTwo, and a gate built on it
+cuts attack success by \PrimGate\%. This is an upper bound: the log is assumed intact and no forger targeted
+the auditor. A signature shown to the model as invalid still leaves \PfourGTwoSTTwoPooledAsr\% attack success.
+In the local model, surprisal of a note given the log carries the signal and an authorship probe does not. An
+agent's confidence in a note is no evidence for it. What helps is keeping the evidence the note was written
+from.
+\end{list}
+
+\input{sections/body}
+
+\section*{Code and Data}
+\begin{itemize}
+\item \textbf{Code repository:} \url{https://github.com/timwuerfl/whose-memory}. It holds the MemLab
+environment, the experiment runners, the analysis that generates every number, table and figure in this
+paper, and the pre-registration with its two amendments (\texttt{PREREGISTRATION.md}).
+\item \textbf{Data:} the raw model responses, the processed rows and the spend ledger are in the same
+repository under \texttt{results/}. All tasks are synthetic and use fictional entities.
+\end{itemize}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\clearpage
+\appendix
+\titleformat{\section}{\fontsize{14}{19}\selectfont\bfseries}{Appendix \thesection.}{0.4em}{}
+\input{sections/appendix}
+
+\end{document}

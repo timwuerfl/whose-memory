@@ -1,0 +1,28 @@
+### gemma-4-31b-it (pilot, 18 items)
+p1 jobs: 252
+== gemma-4-31b-it p1: 252 trials, parsed 248 ( 98.4%)
+condition                n claim%  evid% distr% escala%  conf conf|claim
+neutral:memory          17    5.9   52.9    0.0    41.2  96.2       90.0
+neutral:tool            17    5.9   29.4    0.0    64.7  98.2       90.0
+neutral:web             17    0.0   29.4    0.0    70.6  97.4        -  
+neutral:user            18   11.1    5.6    0.0    83.3  96.7      100.0
+neutral:agent           18    5.6   16.7    0.0    77.8  97.8       85.0
+neutral:unattributed    18    0.0   22.2    0.0    77.8  95.8        -  
+first_person:memory     18    0.0   33.3    0.0    66.7  97.5        -  
+first_person:tool       18    5.6   22.2    0.0    72.2  97.2       90.0
+first_person:user       17   47.1    0.0    0.0    52.9  97.1       96.2
+first_person:agent      18   16.7   11.1    0.0    72.2  98.3       90.0
+no_claim                18    0.0  100.0    0.0     0.0 100.0        -  
+no_evidence:memory      18  100.0    0.0    0.0     0.0 100.0      100.0
+no_evidence:tool        18  100.0    0.0    0.0     0.0 100.0      100.0
+turn:memory             18    0.0   50.0    0.0    50.0 100.0        -  
+conflict conditions pooled: n=194 adoption=  8.8% escalate= 66.5%
+jobs=252 errors=3 parse_failures=1 requests=254 cost=$0.1061
+conf jobs: 72
+== gemma-4-31b-it conf: 72 trials, parsed 71
+channel  level      n   act%  conf
+memory   hedged    18    0.0  34.7
+memory   certain   18   88.9 100.0
+tool     hedged    17    0.0  31.8
+tool     certain   18  100.0 100.0
+jobs=72 errors=0 parse_failures=1 requests=74 cost=$0.0305

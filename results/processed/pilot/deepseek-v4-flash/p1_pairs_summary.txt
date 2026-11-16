@@ -1,0 +1,62 @@
+### deepseek-v4-flash (pilot, 9 items)
+pair-design jobs: 179
+== deepseek-v4-flash p1_pairs: 179 trials, parsed 177 (  99%), errors 2
+-- HEADLINE memory vs X (pair, neutral): X  n  %memory  %X  %esc  net(memory-X)
+  tool           9    0   22   78  -22
+  web            9    0   44   56  -44
+  user           9    0   33   67  -33
+  agent          9    0   11   89  -11
+  unattributed   9    0   33   67  -33
+  document       9    0   33   67  -33
+-- all pairs (neutral): pair  n  %A  %B  %esc  %distr
+        memory vs tool           9    0   22   78    0
+        memory vs web            9    0   44   56    0
+        memory vs user           9    0   33   67    0
+        memory vs agent          9    0   11   89    0
+        memory vs unattributed   9    0   33   67    0
+        memory vs document       9    0   33   67    0
+          tool vs web            3    0    0  100    0
+          tool vs user           8    0    0  100    0
+          tool vs agent          3    0    0  100    0
+           web vs agent          2    0    0  100    0
+           web vs unattributed   3    0   33   67    0
+           web vs document       3    0   33   67    0
+          user vs agent          1  100    0    0    0
+          user vs document       9   22   11   67    0
+  unattributed vs document       3    0    0  100    0
+-- win matrix (pair): row channel chosen over column channel, % (n) among trials where a side was chosen
+                   memory       tool        web       user      agent  unattribu   document
+  memory                .       0(2)       0(4)       0(3)       0(1)       0(3)       0(3)
+  tool             100(2)          .                                                       
+  web              100(4)                     .                             0(1)       0(1)
+  user             100(3)                                .     100(1)                 67(3)
+  agent            100(1)                             0(1)          .                      
+  unattributed     100(3)                100(1)                                .           
+  document         100(3)                100(1)      33(3)                                .
+-- forced (no escalate option): pair  n  %A  %B  %esc  %distr
+        memory vs tool           9    0  100    0    0
+        memory vs user           9    0  100    0    0
+        memory vs document       9    0  100    0    0
+-- win matrix (forced): row channel chosen over column channel, % (n) among trials where a side was chosen
+                   memory       tool        web       user      agent  unattribu   document
+  memory                .       0(9)                  0(9)                             0(9)
+  tool             100(9)          .                                                       
+  web                                         .                                            
+  user             100(9)                                .                                 
+  agent                                                             .                      
+  unattributed                                                                 .           
+  document         100(9)                                                                 .
+-- framing (first_person side): pair  n_paired  %fp-side followed: framed vs neutral  diff  | %esc framed vs neutral
+  memory(fp) vs tool         9   11 vs    0   +11 |   67 vs   78
+  memory(fp) vs document     9    0 vs    0    +0 |   56 vs   67
+  user(fp) vs tool         8   38 vs    0   +38 |   62 vs  100
+  user(fp) vs document     9   33 vs   22   +11 |   56 vs   67
+-- turn vs labelled memory: vs X  n_paired  %memory followed: turn vs label  diff  | %esc turn vs label
+  vs tool         8    0 vs    0    +0 |   25 vs   75
+  vs document     9    0 vs    0    +0 |   44 vs   67
+-- single claim (no conflict): channel  n  %adopt  %esc  %other
+  memory       4  100    0    0
+  tool         4  100    0    0
+-- position: share following the first-shown claim =   59% (n=63, pair/framing/forced, a side chosen)
+-- escalation overall (pair/framing/turn):   67% (n=142)
+jobs=179 errors=2 (of which not retried: 0) parse_failures=0 cost=$0.0128

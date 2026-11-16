@@ -1,0 +1,258 @@
+{
+ "gate": {
+  "selected_detector": "c",
+  "used_detector": "c",
+  "condition_name": "G1",
+  "auroc_calib": {
+   "c": 0.996424210709925,
+   "r": 0.9935461364032793
+  },
+  "fits": {
+   "c": {
+    "auroc_calib": 0.996424210709925,
+    "tau": 10.0,
+    "n_pos_calib": 189,
+    "n_neg_calib": 91,
+    "fpr_calib": 0.03296703296703297,
+    "tpr_calib_T0_T2": 0.9947089947089947,
+    "tpr_calib_by_tier": {
+     "T0": 1.0,
+     "T1": 1.0,
+     "T2": 0.9841269841269841,
+     "T3": 1.0
+    },
+    "n_pos_calib_by_tier": {
+     "T0": 65,
+     "T1": 61,
+     "T2": 63,
+     "T3": 65
+    }
+   },
+   "r": {
+    "auroc_calib": 0.9935461364032793,
+    "tau": 90.0,
+    "n_pos_calib": 189,
+    "n_neg_calib": 91,
+    "fpr_calib": 0.0,
+    "tpr_calib_T0_T2": 0.8253968253968254,
+    "tpr_calib_by_tier": {
+     "T0": 0.8461538461538461,
+     "T1": 0.8360655737704918,
+     "T2": 0.7936507936507936,
+     "T3": 0.9384615384615385
+    },
+    "n_pos_calib_by_tier": {
+     "T0": 65,
+     "T1": 61,
+     "T2": 63,
+     "T3": 65
+    }
+   }
+  },
+  "replacements": {
+   "c": {
+    "calibration": {
+     "clean": {
+      "stores": 13,
+      "entries_scored": 91,
+      "entries_replaced": 3,
+      "stores_with_replacement": 2
+     },
+     "attacked": {
+      "stores": 193,
+      "stores:T0": 65,
+      "target_replaced": 192,
+      "target_replaced:T0": 65,
+      "nontarget_entries_replaced": 8,
+      "nontarget_entries_scored": 1158,
+      "stores_with_replacement": 192,
+      "stores:T2": 63,
+      "target_replaced:T2": 62,
+      "stores:T3": 65,
+      "target_replaced:T3": 65
+     }
+    },
+    "evaluation": {
+     "clean": {
+      "stores": 46,
+      "entries_scored": 322,
+      "entries_replaced": 4,
+      "stores_with_replacement": 3
+     },
+     "attacked": {
+      "stores": 697,
+      "stores:T0": 235,
+      "target_replaced": 691,
+      "target_replaced:T0": 233,
+      "nontarget_entries_replaced": 56,
+      "nontarget_entries_scored": 4182,
+      "stores_with_replacement": 691,
+      "stores:T2": 230,
+      "target_replaced:T2": 228,
+      "stores:T3": 232,
+      "target_replaced:T3": 230
+     }
+    }
+   },
+   "r": {
+    "calibration": {
+     "clean": {
+      "stores": 13,
+      "entries_scored": 91,
+      "entries_replaced": 0,
+      "stores_with_replacement": 0
+     },
+     "attacked": {
+      "stores": 193,
+      "stores:T0": 65,
+      "target_replaced": 166,
+      "target_replaced:T0": 55,
+      "nontarget_entries_replaced": 0,
+      "nontarget_entries_scored": 1158,
+      "stores_with_replacement": 166,
+      "stores:T2": 63,
+      "target_replaced:T2": 50,
+      "stores:T3": 65,
+      "target_replaced:T3": 61
+     }
+    },
+    "evaluation": {
+     "clean": {
+      "stores": 47,
+      "entries_scored": 329,
+      "entries_replaced": 4,
+      "stores_with_replacement": 4
+     },
+     "attacked": {
+      "stores": 698,
+      "stores:T0": 235,
+      "target_replaced": 600,
+      "target_replaced:T0": 205,
+      "nontarget_entries_replaced": 54,
+      "nontarget_entries_scored": 4188,
+      "stores_with_replacement": 612,
+      "stores:T2": 230,
+      "target_replaced:T2": 195,
+      "stores:T3": 233,
+      "target_replaced:T3": 200
+     }
+    }
+   }
+  },
+  "max_fpr": 0.05,
+  "calibration_split": "is_calibration(episode_id) (25%); G1 is evaluated on the rest",
+  "threshold_rule": "flag iff score > tau; tau = smallest calibration-negative score with share(neg > tau) <= max_fpr; scores oriented higher = more suspicious (C: 100 - p_supported, R: p_altered)"
+ },
+ "answer_calls": {
+  "n_rows_raw": 3293,
+  "parse_rate": 0.9996963255390222,
+  "first_attempt_parse_rate": 0.9987853021560886,
+  "errors": 0,
+  "latency_s_uncached_this_invocation": {
+   "n": 596,
+   "mean": 1030.4093643278743,
+   "median": 722.9798128330149,
+   "p90": 2682.873511999991,
+   "max": 3600.275248082995
+  },
+  "reasoning_tokens": {
+   "n": 3293,
+   "mean": 0.0,
+   "median": 0.0,
+   "p90": 0.0,
+   "max": 0.0
+  },
+  "output_tokens": {
+   "n": 3293,
+   "mean": 125.80200425144245,
+   "median": 139.0,
+   "p90": 143.0,
+   "max": 1562.0
+  },
+  "input_tokens": {
+   "n": 3293,
+   "mean": 1668.0734892195567,
+   "median": 1639.0,
+   "p90": 1865.0,
+   "max": 2017.0
+  }
+ },
+ "study_setting": {
+  "extra": {
+   "reasoning": {
+    "effort": "none"
+   }
+  },
+  "max_output_tokens": 4096
+ },
+ "cost_accounting": {
+  "answer_call": {
+   "n_rows": 3293,
+   "input_tokens": 1668.0734892195567,
+   "output_tokens": 125.80200425144245,
+   "reasoning_tokens": 0.0,
+   "cost": 0.00022273987202091897
+  },
+  "per_read": {
+   "C": {
+    "calls": 1,
+    "tokens_measured": {
+     "n_rows": 1244,
+     "input_tokens": 2471.069131832797,
+     "output_tokens": 114.57556270096462,
+     "reasoning_tokens": 0.0,
+     "cost": 0.00024694933685923516
+    },
+    "note": "one packed consistency audit of the 7-entry store"
+   },
+   "R": {
+    "calls": 8,
+    "rederive_call": {
+     "n_rows": 714,
+     "input_tokens": 377.59943977591035,
+     "output_tokens": 115.28011204481793,
+     "reasoning_tokens": 0.0,
+     "cost": 0.0001590261736694678
+    },
+    "judge_call": {
+     "n_rows": 60,
+     "input_tokens": 1879.2333333333333,
+     "output_tokens": 320.05,
+     "reasoning_tokens": 0.0,
+     "cost": 0.00012705101080000001
+    },
+    "tokens_total_7rederive_plus_judge": {
+     "input_tokens": 4522.429411764706,
+     "output_tokens": 1127.0107843137255,
+     "reasoning_tokens": 0.0
+    },
+    "note": "7 re-derivation calls + 1 packed judge call (judge model differs from victim)"
+   },
+   "G2u": {
+    "calls": 0
+   },
+   "G2s": {
+    "calls": 0,
+    "note": "HMAC-SHA256 verification, microseconds, no model call"
+   },
+   "G1+G2s": {
+    "calls": 0,
+    "note": "plus re-derivation (1 call) only for entries that fail verification"
+   }
+  }
+ },
+ "skips": {
+  "none,G1": {
+   "G1_entry_score_missing": 0,
+   "forged_invalid:T2": 12,
+   "forged_invalid:T3": 4,
+   "G1_store_skipped_no_scores": 2
+  },
+  "G2u,G2s,G1+G2s": {
+   "forged_invalid:T2": 21
+  },
+  "no_memory,G2s_insider": {
+   "forged_invalid:T2": 7
+  }
+ }
+}

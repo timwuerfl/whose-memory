@@ -1,0 +1,4 @@
+condition,group,accuracy_est,accuracy_lo,accuracy_hi,accuracy_n,accuracy_n_clusters
+none,pooled,0.9916666666666667,0.975,1.0,120,12
+none,deepseek-v4-flash,1.0,0.9403705077138331,1.0,60,12
+none,gemma-4-31b-it,0.9833333333333333,0.95,1.0,60,12

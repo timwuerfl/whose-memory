@@ -1,0 +1,99 @@
+{
+ "answer_calls": {
+  "n_rows_raw": 246,
+  "parse_rate": 0.9959349593495935,
+  "first_attempt_parse_rate": 0.991869918699187,
+  "errors": 0,
+  "latency_s_uncached_this_invocation": {
+   "n": 3,
+   "mean": 29.56931098633504,
+   "median": 18.574057499994524,
+   "p90": 63.87701404200925,
+   "max": 63.87701404200925
+  },
+  "reasoning_tokens": {
+   "n": 246,
+   "mean": 1925.2886178861788,
+   "median": 1011.0,
+   "p90": 4739.0,
+   "max": 8595.0
+  },
+  "output_tokens": {
+   "n": 246,
+   "mean": 2108.4634146341464,
+   "median": 1155.0,
+   "p90": 4853.0,
+   "max": 16384.0
+  },
+  "input_tokens": {
+   "n": 246,
+   "mean": 1350.5284552845528,
+   "median": 1353.0,
+   "p90": 1442.0,
+   "max": 1493.0
+  }
+ },
+ "cost_accounting": {
+  "answer_call": {
+   "n_rows": 246,
+   "input_tokens": 1350.5284552845528,
+   "output_tokens": 2108.4634146341464,
+   "reasoning_tokens": 1925.2886178861788,
+   "cost": 0.0009226795927601809
+  },
+  "per_read": {
+   "C": {
+    "calls": 1,
+    "tokens_measured": {
+     "n_rows": 19,
+     "input_tokens": 2334.0,
+     "output_tokens": 2729.2631578947367,
+     "reasoning_tokens": 1802.2105263157894,
+     "cost": 0.0017022642105263158
+    },
+    "note": "one packed consistency audit of the 7-entry store"
+   },
+   "R": {
+    "calls": 8,
+    "rederive_call": {
+     "n_rows": 82,
+     "input_tokens": 381.0,
+     "output_tokens": 634.9024390243902,
+     "reasoning_tokens": 541.5853658536586,
+     "cost": 0.00023798121951219508
+    },
+    "judge_call": {
+     "n_rows": 1,
+     "input_tokens": 1555.0,
+     "output_tokens": 3331.0,
+     "reasoning_tokens": 3029.0,
+     "cost": 0.00051319312
+    },
+    "tokens_total_7rederive_plus_judge": {
+     "input_tokens": 4222.0,
+     "output_tokens": 7775.317073170731,
+     "reasoning_tokens": 6820.09756097561
+    },
+    "note": "7 re-derivation calls + 1 packed judge call (judge model differs from victim)"
+   },
+   "G2u": {
+    "calls": 0
+   },
+   "G2s": {
+    "calls": 0,
+    "note": "HMAC-SHA256 verification, microseconds, no model call"
+   },
+   "G1+G2s": {
+    "calls": 0,
+    "note": "plus re-derivation (1 call) only for entries that fail verification"
+   }
+  }
+ },
+ "skips": {
+  "none,no_memory": {
+   "forged_invalid:T2": 1,
+   "forged_invalid:T3": 1,
+   "instance_skipped_missing_genuine": 1
+  }
+ }
+}

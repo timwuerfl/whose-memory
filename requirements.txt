@@ -1,0 +1,13 @@
+# Python 3.12; pinned to the versions installed in .venv. Imported by memlab/, experiments/, analysis/, tests/.
+# Install: UV_CACHE_DIR="$PWD/cache/uv" uv pip install --python .venv/bin/python -r requirements.txt
+httpx==0.28.1
+matplotlib==3.11.2
+numpy==2.5.4
+pandas==3.1.1
+pytest==9.2.0
+scikit-learn==1.9.1
+scipy==1.18.1
+statsmodels==0.15.0
+torch==2.15.0
+tqdm==4.70.1
+transformers==5.23.0

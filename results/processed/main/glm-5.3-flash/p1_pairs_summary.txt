@@ -1,0 +1,72 @@
+### glm-5.3-flash (main, 120 items)
+pair-design jobs: 1680 (designs: pair,framing)
+== glm-5.3-flash p1_pairs: 2314 trials, parsed 2309 ( 100%), errors 5
+-- HEADLINE memory vs X (pair, neutral): X  n  %memory  %X  %esc  net(memory-X)
+  tool         120    0   44   56  -44
+  web          120    7    7   87   +0
+  user         120    0   47   53  -47
+  agent        120    2   22   76  -19
+  unattributed 120    0   31   69  -31
+  document     120    0   45   55  -45
+-- all pairs (neutral): pair  n  %A  %B  %esc  %distr
+        memory vs tool         120    0   44   56    0
+        memory vs web          120    7    7   87    0
+        memory vs user         120    0   47   53    0
+        memory vs agent        120    2   22   76    0
+        memory vs unattributed 120    0   31   69    0
+        memory vs document     120    0   45   55    0
+          tool vs web           18   39    0   61    0
+          tool vs user         120   12   15   72    0
+          tool vs agent         18   11    0   89    0
+          tool vs unattributed  18   17    0   83    0
+          tool vs document      20   10    5   85    0
+           web vs user          19    0   42   58    0
+           web vs agent         18    0    0  100    0
+           web vs unattributed  18    0   17   83    0
+           web vs document      18    0   28   72    0
+          user vs agent         18   39    0   61    0
+          user vs unattributed  18   17    0   83    0
+          user vs document     120   15    8   78    0
+         agent vs unattributed  21   10    5   86    0
+         agent vs document      18    6    0   94    0
+  unattributed vs document      18    0   22   78    0
+-- win matrix (pair): row channel chosen over column channel, % (n) among trials where a side was chosen
+                   memory       tool        web       user      agent  unattribu   document
+  memory                .      0(53)     50(16)      0(56)     10(29)      0(37)      0(54)
+  tool            100(53)          .     100(7)     45(33)     100(2)     100(3)      67(3)
+  web              50(16)       0(7)          .       0(8)                  0(3)       0(5)
+  user            100(56)     55(33)     100(8)          .     100(7)     100(3)     67(27)
+  agent            90(29)       0(2)                  0(7)          .      67(3)     100(1)
+  unattributed    100(37)       0(3)     100(3)       0(3)      33(3)          .       0(4)
+  document        100(54)      33(3)     100(5)     33(27)       0(1)     100(4)          .
+-- forced (no escalate option): pair  n  %A  %B  %esc  %distr
+        memory vs tool          71    0  100    0    0
+        memory vs user          72   12   88    0    0
+        memory vs document      73    1   99    0    0
+-- win matrix (forced): row channel chosen over column channel, % (n) among trials where a side was chosen
+                   memory       tool        web       user      agent  unattribu   document
+  memory                .      0(71)                12(72)                            1(73)
+  tool            100(71)          .                                                       
+  web                                         .                                            
+  user             88(72)                                .                                 
+  agent                                                             .                      
+  unattributed                                                                 .           
+  document         99(73)                                                                 .
+-- framing (first_person side): pair  n_paired  %fp-side followed: framed vs neutral  diff  | %esc framed vs neutral
+  memory(fp) vs tool       120    6 vs    0    +6 |   57 vs   56
+  memory(fp) vs document   120    8 vs    0    +8 |   68 vs   55
+  user(fp) vs tool       120   22 vs   15    +7 |   70 vs   72
+  user(fp) vs document   120   18 vs   15    +3 |   76 vs   78
+-- turn vs labelled memory: vs X  n_paired  %memory followed: turn vs label  diff  | %esc turn vs label
+  vs tool        72    0 vs    0    +0 |   64 vs   57
+  vs document    72    0 vs    0    +0 |   69 vs   56
+-- staleness control (B also 'from an earlier session'): memory vs X  n_paired  %memory pair->stale  %X pair->stale  %esc pair->stale
+  vs tool        72     0 ->   3     43 ->  42     57 ->  56
+  vs document    73     0 ->   1     44 ->  29     56 ->  70
+  vs user        72     0 ->   0     42 ->  26     58 ->  74
+-- single claim (no conflict): channel  n  %adopt  %esc  %other
+  memory      26  100    0    0
+  tool        26  100    0    0
+-- position: share following the first-shown claim =   51% (n=725, pair/framing/forced, a side chosen)
+-- escalation overall (pair/framing/turn):   69% (n=1824)
+jobs=1680 errors=0 (of which not retried: 0) parse_failures=0 cost=$0.1019

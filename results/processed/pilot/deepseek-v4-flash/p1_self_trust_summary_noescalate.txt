@@ -1,0 +1,10 @@
+### deepseek-v4-flash (pilot, 18 items)
+no-escalate jobs: 72
+== deepseek-v4-flash p1 NO-ESCALATE (exploratory): 72 trials, parsed 71 ( 98.6%)
+condition                n claim%  evid% distr% distra%  conf conf|claim
+neutral:memory          17    5.9   94.1    0.0     0.0  93.5       90.0
+neutral:tool            18   27.8   72.2    0.0     0.0  91.7       93.0
+first_person:memory     18   11.1   88.9    0.0     0.0  92.2       92.5
+no_claim                18    0.0  100.0    0.0     0.0 100.0        -  
+conflict conditions pooled: n=53 adoption= 15.1% distractor2=  0.0%
+jobs=72 errors=1 parse_failures=0 requests=72 cost=$0.0052

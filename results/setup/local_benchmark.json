@@ -1,0 +1,811 @@
+{
+ "timestamp": "2026-11-13 22:11",
+ "machine": "arm64 macOS 26.7.3",
+ "torch": "2.15.0",
+ "transformers": "5.23.0",
+ "mem_budget_gb": 18.0,
+ "models": [
+  {
+   "name": "primary",
+   "hf_id": "Qwen/Qwen3.5-4B",
+   "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "dtype_requested": "fp16",
+   "load_seconds": 9.2,
+   "dtype_checks": {
+    "fp16": {
+     "finite": true,
+     "mean_surprisal": 2.83918079565968,
+     "max_abs_hidden": 122.0625
+    }
+   },
+   "dtype": "fp16",
+   "weights_driver_gb": 8.25,
+   "n_layers": 32,
+   "d_model": 2560,
+   "auto_layers": [
+    8,
+    16,
+    24,
+    32
+   ],
+   "n_params": 4205751296,
+   "model_class": "Qwen3_5ForCausalLM",
+   "eos_ids": [
+    248044,
+    248046
+   ],
+   "sanity": {
+    "prompt_tail": "ager do?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_generation_contains_think": false,
+    "raw_generation": "A warehouse manager oversees the daily operations of a storage facility by coordinating inventory management, staff scheduling, safety protocols, and logistics to ensure efficient receiving, storing, and shipping of goods.<|im_end|>",
+    "own_vs_shuffled": [
+     {
+      "text": "A warehouse manager oversees the daily operations of a storage facility by coordinating inventory management, staff scheduling, safety protocols, and logistics to ensure efficient receiving, storing, and shipping of goods.",
+      "own_mean": 0.2901145893130206,
+      "shuffled_mean": 5.463212742617256
+     },
+     {
+      "text": "As the first sliver of gold pierces the horizon, the sky transforms from a deep indigo to a blazing canvas of orange and pink, casting a warm, ethereal glow that slowly awakens the world from its nocturnal slumber.",
+      "own_mean": 0.40479858194565593,
+      "shuffled_mean": 6.074430244689693
+     },
+     {
+      "text": "People keep diaries to document their personal experiences, reflect on their thoughts and emotions, and create a tangible record of their lives for future reference.",
+      "own_mean": 0.2793423087054619,
+      "shuffled_mean": 6.666007953728068
+     },
+     {
+      "text": "Focus on understanding the underlying concepts and how things work together, rather than just memorizing syntax or chasing the latest trends.",
+      "own_mean": 0.42417798023317727,
+      "shuffled_mean": 8.618045111497244
+     },
+     {
+      "text": "A memory note is a brief, written record of specific details, observations, or instructions that a person creates to help them recall information later.",
+      "own_mean": 0.5481087463266314,
+      "shuffled_mean": 6.678535657269614
+     },
+     {
+      "text": "After counting 14 widgets and discovering 3 missing gears, a restock was ordered.",
+      "own_mean": 0.17380679892353088,
+      "shuffled_mean": 5.818746653189392
+     }
+    ],
+    "own_lower_than_shuffled_all": true,
+    "p_yes": {
+     "paris_capital_france": {
+      "p_yes": 0.9958011507987976,
+      "mass_yes": 0.9945818781852722,
+      "mass_no": 0.004193712025880814
+     },
+     "seven_even": {
+      "p_yes": 0.012245084159076214,
+      "mass_yes": 0.012225759215652943,
+      "mass_no": 0.9861960411071777
+     },
+     "water_wet": {
+      "p_yes": 0.3141503632068634,
+      "mass_yes": 0.31081804633140564,
+      "mass_no": 0.6785746216773987
+     },
+     "sun_cold": {
+      "p_yes": 0.15616674721240997,
+      "mass_yes": 0.1553683578968048,
+      "mass_no": 0.839519202709198
+     }
+    },
+    "p_yes_paris_gt_0.5": true,
+    "score_batched_vs_unbatched_max_abs_diff": 0.014765024185180664,
+    "score_batched_vs_unbatched_mean_abs_diff_of_means": 0.0006969795591805772,
+    "greedy_batched_equals_unbatched": [
+     true,
+     true,
+     true,
+     true
+    ],
+    "p_yes_batched_vs_unbatched_max_abs_diff": 0.00018754228949546814,
+    "n_hidden_states": 33,
+    "last_hidden_state_equals_hidden_states[-1]": true
+   },
+   "generate": [
+    {
+     "batch_size": 1,
+     "n_items": 2,
+     "seconds": 8.9,
+     "new_tokens_per_s": 18.0,
+     "items_per_s": 0.225,
+     "peak_driver_gb": 8.27,
+     "ok": true
+    },
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 17.56,
+     "new_tokens_per_s": 36.4,
+     "items_per_s": 0.456,
+     "peak_driver_gb": 9.22,
+     "ok": true
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 27.99,
+     "new_tokens_per_s": 45.7,
+     "items_per_s": 0.572,
+     "peak_driver_gb": 10.23,
+     "ok": true
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 54.37,
+     "new_tokens_per_s": 47.1,
+     "items_per_s": 0.589,
+     "peak_driver_gb": 12.28,
+     "ok": true
+    }
+   ],
+   "forward": [
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 7.51,
+     "items_per_s": 1.07,
+     "peak_driver_gb": 10.26,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.8668
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 14.76,
+     "items_per_s": 1.08,
+     "peak_driver_gb": 11.98,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.8834
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 31.84,
+     "items_per_s": 1.0,
+     "peak_driver_gb": 14.21,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.9041
+    },
+    {
+     "batch_size": 32,
+     "n_items": 64,
+     "seconds": 81.19,
+     "items_per_s": 0.79,
+     "peak_driver_gb": 19.26,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.8905
+    }
+   ],
+   "peak_driver_gb": 19.26,
+   "recommended": {
+    "generate_batch_size": 16,
+    "forward_batch_size": 8,
+    "largest_safe_generate_batch": 16,
+    "largest_safe_forward_batch": 16
+   },
+   "estimates_hours": {
+    "a_generate_2100_notes_80tok": 0.99,
+    "b_generate_8x600_rewrites_80tok": 2.26,
+    "c_score_12000_pairs_twice": 6.17
+   }
+  },
+  {
+   "name": "primary",
+   "hf_id": "Qwen/Qwen3.5-4B",
+   "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "dtype_requested": "bf16",
+   "load_seconds": 5.9,
+   "dtype_checks": {
+    "bf16": {
+     "finite": true,
+     "mean_surprisal": 2.8384366578332934,
+     "max_abs_hidden": 122.5
+    }
+   },
+   "dtype": "bf16",
+   "weights_driver_gb": 8.25,
+   "n_layers": 32,
+   "d_model": 2560,
+   "auto_layers": [
+    8,
+    16,
+    24,
+    32
+   ],
+   "n_params": 4205751296,
+   "model_class": "Qwen3_5ForCausalLM",
+   "eos_ids": [
+    248044,
+    248046
+   ],
+   "sanity": {
+    "prompt_tail": "ager do?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_generation_contains_think": false,
+    "raw_generation": "A warehouse manager oversees the daily operations of a storage facility by coordinating inventory management, staff scheduling, safety compliance, and logistics to ensure efficient receiving, storing, and shipping of goods.<|im_end|>",
+    "own_vs_shuffled": [
+     {
+      "text": "A warehouse manager oversees the daily operations of a storage facility by planning inventory levels, directing staff, ensuring safety compliance, and optimizing logistics to ensure efficient order fulfillment.",
+      "own_mean": 0.36525046978425735,
+      "shuffled_mean": 5.916712435633492
+     },
+     {
+      "text": "As the first sliver of gold pierces the horizon, the sky transforms from a deep indigo to a canvas of burning orange and soft pink, gradually bathing the world in a warm, ethereal light that chases away the lingering shadows of night.",
+      "own_mean": 0.34975379738562323,
+      "shuffled_mean": 6.05343925485424
+     },
+     {
+      "text": "People keep diaries to document their personal experiences, reflect on their thoughts and emotions, and create a tangible record of their lives for future reference.",
+      "own_mean": 0.28350529737822244,
+      "shuffled_mean": 6.711573205824042
+     },
+     {
+      "text": "Focus on understanding the underlying concepts and how things work together, rather than just memorizing syntax or chasing the latest trends.",
+      "own_mean": 0.4270885075697303,
+      "shuffled_mean": 8.07594384253025
+     },
+     {
+      "text": "A memory note is a brief, written record of specific details, observations, or instructions that a person creates to help them recall information later.",
+      "own_mean": 0.5553464943479541,
+      "shuffled_mean": 6.811842863048826
+     },
+     {
+      "text": "After counting 14 widgets and discovering 3 missing gears, a restock was ordered.",
+      "own_mean": 0.17689690827070367,
+      "shuffled_mean": 5.138695931981171
+     }
+    ],
+    "own_lower_than_shuffled_all": true,
+    "p_yes": {
+     "paris_capital_france": {
+      "p_yes": 0.9959297776222229,
+      "mass_yes": 0.9947068095207214,
+      "mass_no": 0.004065225366503
+     },
+     "seven_even": {
+      "p_yes": 0.01243564672768116,
+      "mass_yes": 0.012415829114615917,
+      "mass_no": 0.9859905242919922
+     },
+     "water_wet": {
+      "p_yes": 0.2943158745765686,
+      "mass_yes": 0.2914172112941742,
+      "mass_no": 0.698733925819397
+     },
+     "sun_cold": {
+      "p_yes": 0.16457656025886536,
+      "mass_yes": 0.16368399560451508,
+      "mass_no": 0.8308926224708557
+     }
+    },
+    "p_yes_paris_gt_0.5": true,
+    "score_batched_vs_unbatched_max_abs_diff": 0.1491391658782959,
+    "score_batched_vs_unbatched_mean_abs_diff_of_means": 0.006006788253305473,
+    "greedy_batched_equals_unbatched": [
+     false,
+     false,
+     true,
+     true
+    ],
+    "p_yes_batched_vs_unbatched_max_abs_diff": 0.0544256865978241,
+    "n_hidden_states": 33,
+    "last_hidden_state_equals_hidden_states[-1]": true
+   },
+   "generate": [
+    {
+     "batch_size": 1,
+     "n_items": 2,
+     "seconds": 8.67,
+     "new_tokens_per_s": 18.5,
+     "items_per_s": 0.231,
+     "peak_driver_gb": 8.27,
+     "ok": true
+    },
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 17.53,
+     "new_tokens_per_s": 36.5,
+     "items_per_s": 0.456,
+     "peak_driver_gb": 9.22,
+     "ok": true
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 27.51,
+     "new_tokens_per_s": 46.5,
+     "items_per_s": 0.582,
+     "peak_driver_gb": 10.23,
+     "ok": true
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 54.08,
+     "new_tokens_per_s": 47.3,
+     "items_per_s": 0.592,
+     "peak_driver_gb": 12.28,
+     "ok": true
+    }
+   ],
+   "forward": [
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 7.46,
+     "items_per_s": 1.07,
+     "peak_driver_gb": 10.26,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.8673
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 14.69,
+     "items_per_s": 1.09,
+     "peak_driver_gb": 11.98,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.8831
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 30.64,
+     "items_per_s": 1.04,
+     "peak_driver_gb": 14.21,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.9037
+    },
+    {
+     "batch_size": 32,
+     "n_items": 64,
+     "seconds": 78.98,
+     "items_per_s": 0.81,
+     "peak_driver_gb": 19.26,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 2.8902
+    }
+   ],
+   "peak_driver_gb": 19.26,
+   "recommended": {
+    "generate_batch_size": 16,
+    "forward_batch_size": 8,
+    "largest_safe_generate_batch": 16,
+    "largest_safe_forward_batch": 16
+   },
+   "estimates_hours": {
+    "a_generate_2100_notes_80tok": 0.99,
+    "b_generate_8x600_rewrites_80tok": 2.25,
+    "c_score_12000_pairs_twice": 6.12
+   }
+  },
+  {
+   "name": "secondary",
+   "hf_id": "Qwen/Qwen3.5-0.8B",
+   "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+   "dtype_requested": "fp16",
+   "load_seconds": 1.1,
+   "dtype_checks": {
+    "fp16": {
+     "finite": true,
+     "mean_surprisal": 2.8949528494450467,
+     "max_abs_hidden": 39.34375
+    }
+   },
+   "dtype": "fp16",
+   "weights_driver_gb": 2.23,
+   "n_layers": 24,
+   "d_model": 1024,
+   "auto_layers": [
+    6,
+    12,
+    18,
+    24
+   ],
+   "n_params": 752393024,
+   "model_class": "Qwen3_5ForCausalLM",
+   "eos_ids": [
+    248044,
+    248046
+   ],
+   "sanity": {
+    "prompt_tail": "ager do?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_generation_contains_think": false,
+    "raw_generation": "A warehouse manager oversees inventory, processes orders, and ensures that goods are stored, transported, and managed efficiently to meet customer demands.<|im_end|>",
+    "own_vs_shuffled": [
+     {
+      "text": "A warehouse manager oversees inventory, processes orders, and ensures that goods are stored, transported, and managed efficiently to meet customer demands.",
+      "own_mean": 0.7256812833321209,
+      "shuffled_mean": 6.658266995961849
+     },
+     {
+      "text": "A golden sunrise paints the sky in hues of orange, pink, and purple, signaling the beginning of a new day.",
+      "own_mean": 0.5948436824816478,
+      "shuffled_mean": 6.85344048500061
+     },
+     {
+      "text": "Diaries serve as a personal archive that preserves memories, tracks daily habits, and provides a structured way to reflect on life.",
+      "own_mean": 0.8688492707256228,
+      "shuffled_mean": 7.633110325210369
+     },
+     {
+      "text": "Don't try to master every single language or framework at once; instead, focus on mastering one core language and one core framework to build a solid foundation that you can expand upon later.",
+      "own_mean": 0.8415323272135071,
+      "shuffled_mean": 7.470055220497621
+     },
+     {
+      "text": "A memory note is a digital or physical record that captures a specific event, feeling, or thought to help you recall it later.",
+      "own_mean": 0.7917515486635518,
+      "shuffled_mean": 6.698014043844664
+     },
+     {
+      "text": "Three gears are missing and a restock was ordered after counting 14 widgets.",
+      "own_mean": 0.44369008323722964,
+      "shuffled_mean": 6.83692565229204
+     }
+    ],
+    "own_lower_than_shuffled_all": true,
+    "p_yes": {
+     "paris_capital_france": {
+      "p_yes": 0.7520339488983154,
+      "mass_yes": 0.7488091588020325,
+      "mass_no": 0.246902734041214
+     },
+     "seven_even": {
+      "p_yes": 0.27826568484306335,
+      "mass_yes": 0.2652704417705536,
+      "mass_no": 0.6880287528038025
+     },
+     "water_wet": {
+      "p_yes": 0.6298308372497559,
+      "mass_yes": 0.6268675327301025,
+      "mass_no": 0.368427574634552
+     },
+     "sun_cold": {
+      "p_yes": 0.15204539895057678,
+      "mass_yes": 0.15039493143558502,
+      "mass_no": 0.8387499451637268
+     }
+    },
+    "p_yes_paris_gt_0.5": true,
+    "score_batched_vs_unbatched_max_abs_diff": 1.9073486328125e-06,
+    "score_batched_vs_unbatched_mean_abs_diff_of_means": 5.895981828318853e-07,
+    "greedy_batched_equals_unbatched": [
+     true,
+     false,
+     true,
+     true
+    ],
+    "p_yes_batched_vs_unbatched_max_abs_diff": 0.0029250383377075195,
+    "n_hidden_states": 25,
+    "last_hidden_state_equals_hidden_states[-1]": true
+   },
+   "generate": [
+    {
+     "batch_size": 1,
+     "n_items": 2,
+     "seconds": 2.32,
+     "new_tokens_per_s": 68.9,
+     "items_per_s": 0.861,
+     "peak_driver_gb": 2.28,
+     "ok": true
+    },
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 5.51,
+     "new_tokens_per_s": 116.2,
+     "items_per_s": 1.453,
+     "peak_driver_gb": 2.22,
+     "ok": true
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 8.48,
+     "new_tokens_per_s": 151.0,
+     "items_per_s": 1.887,
+     "peak_driver_gb": 3.23,
+     "ok": true
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 15.74,
+     "new_tokens_per_s": 162.6,
+     "items_per_s": 2.033,
+     "peak_driver_gb": 4.28,
+     "ok": true
+    }
+   ],
+   "forward": [
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 1.7,
+     "items_per_s": 4.72,
+     "peak_driver_gb": 3.25,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1344
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 3.24,
+     "items_per_s": 4.94,
+     "peak_driver_gb": 4.7,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1638
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 6.3,
+     "items_per_s": 5.08,
+     "peak_driver_gb": 6.17,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1946
+    },
+    {
+     "batch_size": 32,
+     "n_items": 64,
+     "seconds": 12.38,
+     "items_per_s": 5.17,
+     "peak_driver_gb": 8.08,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1713
+    }
+   ],
+   "peak_driver_gb": 8.08,
+   "recommended": {
+    "generate_batch_size": 16,
+    "forward_batch_size": 32,
+    "largest_safe_generate_batch": 16,
+    "largest_safe_forward_batch": 32
+   },
+   "estimates_hours": {
+    "a_generate_2100_notes_80tok": 0.29,
+    "b_generate_8x600_rewrites_80tok": 0.66,
+    "c_score_12000_pairs_twice": 1.29
+   }
+  },
+  {
+   "name": "secondary",
+   "hf_id": "Qwen/Qwen3.5-0.8B",
+   "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+   "dtype_requested": "bf16",
+   "load_seconds": 0.5,
+   "dtype_checks": {
+    "bf16": {
+     "finite": true,
+     "mean_surprisal": 2.894239226040563,
+     "max_abs_hidden": 39.25
+    }
+   },
+   "dtype": "bf16",
+   "weights_driver_gb": 2.25,
+   "n_layers": 24,
+   "d_model": 1024,
+   "auto_layers": [
+    6,
+    12,
+    18,
+    24
+   ],
+   "n_params": 752393024,
+   "model_class": "Qwen3_5ForCausalLM",
+   "eos_ids": [
+    248044,
+    248046
+   ],
+   "sanity": {
+    "prompt_tail": "ager do?<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "raw_generation_contains_think": false,
+    "raw_generation": "A warehouse manager oversees inventory, processes orders, and ensures that goods are stored, transported, and managed efficiently to meet customer demands.<|im_end|>",
+    "own_vs_shuffled": [
+     {
+      "text": "A warehouse manager oversees inventory, processes orders, and ensures that goods are stored, transported, and managed efficiently to meet customer demands.",
+      "own_mean": 0.7313040304143215,
+      "shuffled_mean": 6.647317690344957
+     },
+     {
+      "text": "A golden sunrise paints the sky in hues of orange, pink, and purple, casting long, dancing shadows across the landscape.",
+      "own_mean": 0.6984166259338963,
+      "shuffled_mean": 6.763033337593079
+     },
+     {
+      "text": "Diaries serve as a personal archive that preserves memories, tracks daily habits, and provides a structured way to reflect on life, helping individuals maintain a sense of continuity and self-awareness.",
+      "own_mean": 0.8249239411764122,
+      "shuffled_mean": 6.919805153197533
+     },
+     {
+      "text": "Don't try to master every single language or framework at once; instead, focus on mastering one core language and one core framework to build a solid foundation, then expand your skills gradually.",
+      "own_mean": 0.8614277583476143,
+      "shuffled_mean": 7.613314040861017
+     },
+     {
+      "text": "A memory note is a digital or physical record that captures a specific event, feeling, or thought to help you recall it later.",
+      "own_mean": 0.7917031750033717,
+      "shuffled_mean": 6.1207929987173815
+     },
+     {
+      "text": "A restock was ordered, 3 gears are missing, and 14 widgets were counted.",
+      "own_mean": 0.37743811874534006,
+      "shuffled_mean": 5.874961572885513
+     }
+    ],
+    "own_lower_than_shuffled_all": true,
+    "p_yes": {
+     "paris_capital_france": {
+      "p_yes": 0.7310815453529358,
+      "mass_yes": 0.727742612361908,
+      "mass_no": 0.2676902115345001
+     },
+     "seven_even": {
+      "p_yes": 0.26895037293434143,
+      "mass_yes": 0.25821566581726074,
+      "mass_no": 0.7018709778785706
+     },
+     "water_wet": {
+      "p_yes": 0.6225080490112305,
+      "mass_yes": 0.6196613907814026,
+      "mass_no": 0.37576571106910706
+     },
+     "sun_cold": {
+      "p_yes": 0.16453175246715546,
+      "mass_yes": 0.16266955435276031,
+      "mass_no": 0.8260122537612915
+     }
+    },
+    "p_yes_paris_gt_0.5": true,
+    "score_batched_vs_unbatched_max_abs_diff": 1.1920928955078125e-06,
+    "score_batched_vs_unbatched_mean_abs_diff_of_means": 5.507997113962659e-07,
+    "greedy_batched_equals_unbatched": [
+     false,
+     false,
+     true,
+     true
+    ],
+    "p_yes_batched_vs_unbatched_max_abs_diff": 0.023851454257965088,
+    "n_hidden_states": 25,
+    "last_hidden_state_equals_hidden_states[-1]": true
+   },
+   "generate": [
+    {
+     "batch_size": 1,
+     "n_items": 2,
+     "seconds": 2.32,
+     "new_tokens_per_s": 68.9,
+     "items_per_s": 0.861,
+     "peak_driver_gb": 2.28,
+     "ok": true
+    },
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 5.52,
+     "new_tokens_per_s": 116.0,
+     "items_per_s": 1.45,
+     "peak_driver_gb": 2.22,
+     "ok": true
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 8.22,
+     "new_tokens_per_s": 155.8,
+     "items_per_s": 1.947,
+     "peak_driver_gb": 3.23,
+     "ok": true
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 15.53,
+     "new_tokens_per_s": 164.9,
+     "items_per_s": 2.061,
+     "peak_driver_gb": 4.25,
+     "ok": true
+    }
+   ],
+   "forward": [
+    {
+     "batch_size": 4,
+     "n_items": 8,
+     "seconds": 1.69,
+     "items_per_s": 4.72,
+     "peak_driver_gb": 3.25,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1359
+    },
+    {
+     "batch_size": 8,
+     "n_items": 16,
+     "seconds": 3.22,
+     "items_per_s": 4.97,
+     "peak_driver_gb": 4.7,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1646
+    },
+    {
+     "batch_size": 16,
+     "n_items": 32,
+     "seconds": 6.25,
+     "items_per_s": 5.12,
+     "peak_driver_gb": 6.17,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1946
+    },
+    {
+     "batch_size": 32,
+     "n_items": 64,
+     "seconds": 12.2,
+     "items_per_s": 5.25,
+     "peak_driver_gb": 9.04,
+     "ok": true,
+     "finite": true,
+     "mean_surprisal": 3.1715
+    }
+   ],
+   "peak_driver_gb": 9.04,
+   "recommended": {
+    "generate_batch_size": 16,
+    "forward_batch_size": 32,
+    "largest_safe_generate_batch": 16,
+    "largest_safe_forward_batch": 32
+   },
+   "estimates_hours": {
+    "a_generate_2100_notes_80tok": 0.28,
+    "b_generate_8x600_rewrites_80tok": 0.65,
+    "c_score_12000_pairs_twice": 1.27
+   }
+  }
+ ],
+ "plain": {
+  "gpt2": {
+   "hf_id": "openai-community/gpt2",
+   "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+   "device": "cpu",
+   "dtype": "fp32",
+   "load_seconds": 0.1,
+   "texts_per_s": 42.7,
+   "max_length": 1024,
+   "mean_surprisal_sentence": 6.158937501055854,
+   "mean_surprisal_shuffled": 9.279834286371868,
+   "sentence_lower": true
+  },
+  "secondary": {
+   "hf_id": "Qwen/Qwen3.5-0.8B",
+   "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+   "device": "mps",
+   "dtype": "bf16",
+   "load_seconds": 0.5,
+   "texts_per_s": 39.4,
+   "max_length": 4096,
+   "mean_surprisal_sentence": 5.565078742802143,
+   "mean_surprisal_shuffled": 9.437507518132527,
+   "sentence_lower": true
+  }
+ }
+}

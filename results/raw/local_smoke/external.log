@@ -1,0 +1,14 @@
+usage: local_pipeline.py [-h] [--out OUT] [--acts ACTS]
+                         [--limit-episodes LIMIT_EPISODES] [--device DEVICE]
+                         [--gen-batch GEN_BATCH] [--fwd-batch FWD_BATCH]
+                         [--prefix-chunk PREFIX_CHUNK]
+                         [--chunk-tokens CHUNK_TOKENS]
+                         [--groups-per-batch GROUPS_PER_BATCH]
+                         [--no-prefix-cache] [--kinds [KINDS ...]]
+                         [--passes [PASSES ...]] [--max-items MAX_ITEMS]
+                         [--flush-every FLUSH_EVERY] [--parts [PARTS ...]]
+                         [--api-concurrency API_CONCURRENCY]
+                         [--rpm-scale RPM_SCALE] [--max-spend MAX_SPEND]
+                         [--t0-only]
+                         {notes,hosted,forge,items,score,external,select,report}
+local_pipeline.py: error: unrecognized arguments: --limit-episodes 2 --out results/raw/local_smoke --acts cache/local_acts_smoke

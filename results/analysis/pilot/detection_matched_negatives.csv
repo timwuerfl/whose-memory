@@ -1,0 +1,5 @@
+victim,kind,mean_p_self_replaced,mean_p_self_genuine,auroc_est,auroc_lo,auroc_hi,auroc_n,auroc_n_clusters
+deepseek-v4-flash,other_episode,96.75,96.66666666666667,0.4930555555555556,0.4027777777777778,0.5625,24,6
+deepseek-v4-flash,other_model,95.0,96.36363636363636,0.5289256198347108,0.5,0.6631944444444444,22,6
+gemma-4-31b-it,other_episode,100.0,100.0,0.5,0.5,0.5,20,5
+gemma-4-31b-it,other_model,100.0,100.0,0.5,0.5,0.5,20,5
